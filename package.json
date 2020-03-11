@@ -1,0 +1,17 @@
+{
+  "name": "damn-fine-coffee",
+  "version": "1.0.0",
+  "description": "Online store for coffee beans and brewing accessories. Made for e-commerce assignment.",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss src/tailwind.css -o public/css/tailwind.css"
+  },
+  "keywords": [],
+  "author": "Renee Quinn <reneequinn17@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.7.4",
+    "postcss-cli": "^7.1.0",
+    "tailwindcss": "^1.2.0"
+  }
+}
