@@ -4,7 +4,107 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Damn Fine Coffee Co.</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Zilla+Slab:700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/tailwind.css" />
   </head>
-  <body></body>
+  <body class="bg-brown">
+    <header class="bg-gray-900 sm:flex sm:px-10 sm:py-3 sm:items-center">
+      <div class="flex items-center justify-between px-4 py-3 sm:p-0">
+        <div class="mr-4">
+          <a
+            href="#"
+            class="flex items-center text-gray-100 hover:text-gray-300"
+          >
+            <h1 class="font-display uppercase text-lg">
+              Damn Fine Coffee Co.
+            </h1>
+          </a>
+        </div>
+        <div class="sm:hidden">
+          <button
+            id="menuBtn"
+            type="button"
+            class="block text-gray-100 hover:text-gray-300"
+          >
+            <span id="menuIcon" class="fas fa-bars h-6 w-6"></span>
+          </button>
+        </div>
+      </div>
+      <nav
+        id="nav"
+        class="px-2 pt-2 pb-4 text-white font-semibold hidden sm:block sm:flex sm:p-0 sm:justify-between flex-grow"
+      >
+        <div class="sm:flex sm:items-center">
+          <a class="block rounded px-2 py-1 hover:bg-gray-800" href="#">Home</a>
+          <a
+            class="block rounded px-2 py-1 mt-1 hover:bg-gray-800 sm:mt-0 sm:ml-2"
+            href="#"
+            >Shop</a
+          >
+          <a
+            class="block rounded px-2 py-1 mt-1 hover:bg-gray-800 sm:mt-0 sm:ml-2"
+            href="#"
+            >About</a
+          >
+          <a
+            class="block rounded px-2 py-1 mt-1 hover:bg-gray-800 sm:mt-0 sm:ml-2"
+            href="#"
+            >Contact</a
+          >
+        </div>
+        <div class="sm:flex sm:items-center">
+          <label
+            for="search"
+            class="mr-3 mt-1 sm:mt-0 text-white bg-gray-800 hover:bg-gray-700 sm:py-1 sm:px-2 rounded block sm:inline-block"
+          >
+            <span class="fas fa-search ml-2"></span>
+            <input
+              type="text"
+              class="mr-2 px-2 py-1 rounded-sm bg-gray-800 text-white hover:bg-gray-700"
+              placeholder="Search for item..."
+              name="search"
+            />
+          </label>
+          <a
+            href="#"
+            class="text-gray-100 rounded hover:bg-gray-800 px-2 py-1 mr-3 mt-1 sm:mt-0 block sm:inline-block"
+          >
+            <span class="fas fa-user mr-3 sm:mr-0"></span
+            ><span class="sm:hidden">Login/Register</span>
+          </a>
+          <a
+            href="#"
+            class="text-gray-100 rounded hover:bg-gray-800 px-2 py-1  block sm:inline-block"
+          >
+            <span class="fas fa-shopping-cart mr-3 sm:mr-0"></span
+            ><span class="sm:hidden">Cart</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <script>
+      const menuBtn = document.getElementById('menuBtn');
+      const menuIcon = document.getElementById('menuIcon');
+      toggleMenu = () => {
+        const nav = document.getElementById('nav');
+        nav.classList.toggle('hidden');
+        if (menuIcon.classList.contains('fa-bars')) {
+          menuIcon.classList.replace('fa-bars', 'fa-times');
+        } else {
+          menuIcon.classList.replace('fa-times', 'fa-bars');
+        }
+      };
+      menuBtn.addEventListener('click', toggleMenu);
+    </script>
+  </body>
 </html>
