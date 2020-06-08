@@ -1,3 +1,112 @@
 @tailwind base;
+/* purgecss start ignore */
+
+nav a,
+footer a,
+a h1 {
+  @apply border-b-2 border-transparent;
+}
+nav a:hover,
+footer a:hover,
+a h1:hover {
+  @apply border-black;
+}
+
+input:not([type='submit']):focus,
+textarea:focus {
+  @apply border-blue-600;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+/* purgecss end ignore */
 @tailwind components;
+/* purgecss start ignore */
+
+.btn {
+  @apply font-semibold cursor-pointer rounded;
+}
+
+.btn-sm {
+  @apply px-3 py-2;
+}
+
+.btn-md {
+  @apply px-4 py-2;
+}
+
+.btn-lg {
+  @apply px-6 py-3;
+}
+
+.btn-dark {
+  @apply text-white bg-gray-900 border border-gray-900;
+}
+
+.btn-dark:hover {
+  @apply bg-black border-black;
+}
+
+.btn-light {
+  @apply border border-black bg-white;
+}
+
+.btn-light:hover {
+  @apply bg-gray-100;
+}
+
+.form-control {
+  @apply mb-2;
+}
+
+.form-control label {
+  @apply inline-block font-semibold mb-1;
+}
+
+.form-control span {
+  @apply text-sm text-gray-800;
+}
+
+.form-control input,
+.form-control textarea,
+.form-control select {
+  @apply w-full px-2 py-1 rounded border border-2 border-gray-400;
+}
+
+.form-control input:focus,
+.form-control textarea:focus,
+.form-control select:focus {
+  @apply border-blue-600;
+}
+
+.form-control input.ng-valid.ng-touched,
+.form-control textarea.ng-valid.ng-touched {
+  @apply border-green-600;
+}
+
+.form-control input.ng-invalid.ng-touched,
+.form-control textarea.ng-invalid.ng-touched {
+  @apply border-red-600;
+}
+
+.error-msg {
+  @apply font-semibold;
+}
+
+input.qty {
+  @apply w-10;
+}
+
+.form-control button.btn-dark span {
+  @apply text-white;
+}
+
+/* purgecss end ignore */
 @tailwind utilities;

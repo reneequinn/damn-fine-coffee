@@ -6,16 +6,30 @@ module.exports = {
         'Georgia',
         '"Times New Roman"',
         'Times',
-        'serif'
-      ]
+        'serif',
+      ],
     },
     extend: {
       colors: {
+        black: '#1a1a1a',
         brown: '#40250e',
-        coffee: '#d9ab73'
-      }
-    }
+        'brown-dk': '#36200c',
+        coffee: '#ccaf91',
+        gray: {
+          '100': '#f5f5f5',
+          '200': '#eeeeee',
+          '300': '#e0e0e0',
+          '400': '#bdbdbd',
+          '500': '#9e9e9e',
+          '600': '#757575',
+          '700': '#616161',
+          '800': '#424242',
+          '900': '#212121',
+        },
+        white: '#fafafa',
+      },
+    },
   },
   variants: {},
-  plugins: []
+  plugins: [],
 };

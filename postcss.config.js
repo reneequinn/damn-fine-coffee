@@ -1,3 +1,16 @@
+const purgecss = require('@fullhuman/postcss-purgecss');
+const cssnano = require('cssnano');
+
 module.exports = {
-  plugins: [require('tailwindcss'), require('autoprefixer')]
+  plugins: [
+    require('tailwindcss'),
+    purgecss({
+      content: ['./public/**/*.html', './public/**/*.php', './public/*.php'],
+      defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
+    }),
+    cssnano({
+      preset: 'default',
+    }),
+    require('autoprefixer'),
+  ],
 };
