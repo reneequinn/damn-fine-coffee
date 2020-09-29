@@ -59,7 +59,7 @@ if (isset($_POST['search'])) {
 </html>
 <?php
   } else {
-    header('Location: ../store.php');
+    header('Location: ../pages/store.php');
     exit();
   }
   mysqli_close($link);

@@ -2,7 +2,7 @@
 
 $server = 'localhost';
 $user = 'root';
-$pass = '';
+$pass = 'root';
 $database = 'coffee_db';
 
 ?>
